@@ -1,0 +1,9 @@
+{
+  "name": "bokatime",
+  "version": "0.0.1",
+  "description": "Open source appointment management",
+  "main": "index.js",
+  "repository": "git@github.com:bokatime/bokatime.git",
+  "author": "russlewis@gmail.com",
+  "license": "MIT"
+}
