@@ -5,5 +5,32 @@
   "main": "index.js",
   "repository": "git@github.com:bokatime/bokatime.git",
   "author": "russlewis@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "lint": "tsc --noEmit && lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "eslint-plugin-react": "^7.18.3",
+    "lerna": "^3.20.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.5"
+  }
 }
